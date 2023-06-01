@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+/*
+ * Admin Routes
+ * Namespaces indicate folder structure
+ */
+Route::group(['namespace' => 'admin', 'prefix' => 'admin', 'as' => 'admin.'], function () {
+    require 'admin.php';
+});
