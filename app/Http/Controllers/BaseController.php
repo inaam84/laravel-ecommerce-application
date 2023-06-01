@@ -49,7 +49,7 @@ class BaseController extends Controller
         return redirect()->route($route);
     }
 
-    protected function responseRedirectBack()
+    protected function responseRedirectBack($message, $type)
     {
         $this->setFlashMessages($message, $type);
         $this->showFlashMessages();

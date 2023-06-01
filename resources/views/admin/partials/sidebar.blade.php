@@ -8,8 +8,15 @@
     </div>
     <ul class="app-menu">
         <li>
-            <a class="app-menu__item active" href="#"><i class="app-menu__icon fa fa-dashboard"></i>
+            <a class="app-menu__item active" href="#">
+                <i class="app-menu__icon fa fa-dashboard"></i>
                 <span class="app-menu__label">Dashboard</span>
+            </a>
+        </li>
+        <li>
+            <a class="app-menu__item {{ Route::currentRouteName() == 'admin.brands.index' ? 'active' : '' }}" href="{{ route('admin.brands.index') }}">
+                <i class="app-menu__icon fa fa-briefcase"></i>
+                <span class="app-menu__label">Brands</span>
             </a>
         </li>
         <li class="treeview">
