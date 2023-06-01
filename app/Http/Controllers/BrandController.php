@@ -82,7 +82,7 @@ class BrandController extends BaseController
 
     public function delete($id)
     {
-        $brand = $this->brandRepository->findBrandById($id);
+        $brand = $this->brandRepository->deleteBrand($id);
 
         if(!$brand)
         {

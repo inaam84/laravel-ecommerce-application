@@ -26,7 +26,7 @@ class BaseRepository implements BaseContract
 
     public function all($columns = array('*'), string $orderBy = 'id', string $sortBy = 'desc')
     {
-        $this->model->orderBy($orderBy, $sortBy)->get($columns);
+        return $this->model->orderBy($orderBy, $sortBy)->get($columns);
     }
 
     public function find(int $id)

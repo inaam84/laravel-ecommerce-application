@@ -4,7 +4,7 @@ namespace App\Repositories;
 
 use App\Models\Brand;
 use App\Traits\UploadAble;
-use App\Contracts\BaseContract;
+use App\Contracts\BrandContract;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\UploadedFile;
@@ -15,7 +15,7 @@ use Doctrine\Instantiator\Exception\InvalidArgumentException;
  *
  * @package \App\Repositories
  */
-class BrandRepository extends BaseRepository implements BaseContract
+class BrandRepository extends BaseRepository implements BrandContract
 {
     use UploadAble;
 

@@ -14,7 +14,7 @@ Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 Route::group(['middleware' => ['auth:admin']], function(){
     Route::get('/', function(){
         return view('admin.dashboard.index');
-    })->name('dashboard.index');
+    })->name('dashboard');
 
 });
 

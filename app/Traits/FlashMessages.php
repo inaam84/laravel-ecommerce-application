@@ -26,9 +26,8 @@ trait FlashMessages
                 $model = 'errorMessages';
             }
                 break;
-            case 'success': {
+            case 'success':
                 $model = 'successMessages';
-            }
                 break;
             case 'warning': {
                 $model = 'warningMessages';
@@ -40,12 +39,12 @@ trait FlashMessages
         {
             foreach($message AS $key => $value)
             {
-                array_push($this->model, $value);
+                array_push($this->$model, $value);
             }
         }
         else
         {
-            array_push($this->model, $message);
+            array_push($this->$model, $message);
         }
     }
 
