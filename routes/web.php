@@ -14,9 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('site.pages.homepage');
 });
 
+
+Auth::routes();
 
 /*
  * Admin Routes
@@ -25,3 +27,5 @@ Route::get('/', function () {
 Route::group(['namespace' => 'admin', 'prefix' => 'admin', 'as' => 'admin.'], function () {
     require 'admin.php';
 });
+
+
