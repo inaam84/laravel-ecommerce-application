@@ -15,5 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         \App\Models\Admin::factory(1)->create();
+        $this->call(CategoriesTableSeeder::class);
+        $this->call(SettingsTableSeeder::class);
     }
 }
